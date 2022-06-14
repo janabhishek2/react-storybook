@@ -1,19 +1,31 @@
 import Button from "./Button";
 import "./Button.css";
 import React from "react";
+import { action, actions} from '@storybook/addon-actions';
+
 export default {
   title: "Form/Control/Button",
   component: Button,
   args:{
       children:"Default String"
-  }
+  },
+  argTypes: {
+    onClick: { action: true },
+  },
+};
+const Template=(args)=><Button {...args}/>
+export const Success = Template.bind({});
+Success.args={
+  children:"Success String",
+  variant:"success",
+  onClick:action("Clicked Success")
 };
 
-export const Primary = () => <Button variant="primary">Primary String</Button>;
-export const Secondary = () => (
-  <Button variant="secondary">Secondary String</Button>
-);
-export const Success = () => <Button variant="success">Success String</Button>;
-export const Danger = () => <Button variant="danger">Danger String</Button>;
+export const Danger = Template.bind({});
+Danger.args={
+  children:"Danger String",
+  variant:"danger",
+  onClick:action("Clicked danger")
+}
 
 
