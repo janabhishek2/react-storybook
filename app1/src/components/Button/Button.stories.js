@@ -13,19 +13,17 @@ export default {
     onClick: { action: true },
   },
 };
-const Template=(args)=><Button {...args}/>
+const Template=(args)=><Button {...args} {...actions('onClick','onMouseOut','onMouseOver')}/>
 export const Success = Template.bind({});
 Success.args={
   children:"Success String",
   variant:"success",
-  onClick:action("Clicked Success")
 };
 
 export const Danger = Template.bind({});
 Danger.args={
   children:"Danger String",
   variant:"danger",
-  onClick:action("Clicked danger")
 }
 
 
