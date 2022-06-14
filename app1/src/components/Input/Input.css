@@ -1,0 +1,15 @@
+.input{
+    width:100%;
+}
+.small{
+    height:20%;
+    font-size:100%;
+}
+.medium{
+    height:40%;
+    font-size:120%;
+}
+.large{
+    height:60%;
+    font-size:140%;
+}
