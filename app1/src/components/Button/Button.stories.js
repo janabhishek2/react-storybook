@@ -1,7 +1,7 @@
 import Button from "./Button";
 import "./Button.css";
 import React from "react";
-import Center from "../Center/Center";
+
 export default {
   title: "Form/Control/Button",
   component: Button,
