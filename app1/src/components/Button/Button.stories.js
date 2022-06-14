@@ -1,12 +1,13 @@
 import Button from "./Button";
 import "./Button.css";
 import React from "react";
+import Center from "../Center/Center";
 export default {
   title: "Form/Control/Button",
   component: Button,
   args:{
       children:"Default String"
-  }
+  },
 };
 
 export const Primary = () => <Button variant="primary">Primary String</Button>;
